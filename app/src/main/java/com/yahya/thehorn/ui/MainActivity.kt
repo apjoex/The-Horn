@@ -1,5 +1,6 @@
 package com.yahya.thehorn.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     private val menu = listOf(
         HomeMenu(R.drawable.ic_food, "Food"),
         HomeMenu(R.drawable.ic_numbers, "Numbers"),
-        HomeMenu(R.drawable.ic_animal, "Animals"),
+//        HomeMenu(R.drawable.ic_animal, "Animals"),
         HomeMenu(R.drawable.ic_phrase, "Phrases"),
         HomeMenu(R.drawable.ic_nouns, "Nouns, verbs, adjectives, ...")
     )
@@ -44,5 +45,10 @@ class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
     fun bind(homeMenu: HomeMenu) {
         itemView.menuImg.setImageResource(homeMenu.icon)
         itemView.menuLabel.text = homeMenu.title
+        itemView.card.setOnClickListener {
+            when (homeMenu.title){
+                "Numbers" -> itemView.context.startActivity(Intent(itemView.context, NumbersActivity::class.java))
+            }
+        }
     }
 }

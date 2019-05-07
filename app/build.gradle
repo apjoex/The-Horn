@@ -9,10 +9,11 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.yahya.thehorn"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary true
     }
@@ -36,4 +37,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
 }
