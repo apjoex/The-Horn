@@ -4,6 +4,12 @@ import androidx.annotation.DrawableRes
 
 data class HomeMenu(
     @DrawableRes
-    var icon: Int,
+    val icon: Int,
     val title: String
+)
+
+data class NumberData(
+    val number: Int = 0,
+    val translation: String = "",
+    val sound: String = ""
 )
