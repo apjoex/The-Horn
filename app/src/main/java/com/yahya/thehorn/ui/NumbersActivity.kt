@@ -9,7 +9,7 @@ import com.yahya.thehorn.models.NumberData
 
 class NumbersActivity : AppCompatActivity() {
 
-    val numberssCollectionRef = FirebaseFirestore.getInstance().collection("numbers")
+    private val numbersCollectionRef = FirebaseFirestore.getInstance().collection("numbers")
     var numbers =  mutableListOf<NumberData>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,8 +22,12 @@ class NumbersActivity : AppCompatActivity() {
     }
 
     private fun fetchNumbers() {
-        numberssCollectionRef.get().addOnCompleteListener {
-            println(it.result?.documents)
+        numbersCollectionRef.get().addOnCompleteListener {
+            it.result?.documents?.forEach { snapshot ->
+                numbers.add(snapshot.toObject(NumberData::class.java)!!)
+                return@forEach
+            }
+            println(numbers)
         }
     }
 
