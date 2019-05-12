@@ -10,7 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.NumbersActivity"></activity>
+        <activity android:name=".ui.NVAActivity"></activity>
+        <activity android:name=".ui.PhrasesActivity" />
+        <activity android:name=".ui.FoodActivity" />
+        <activity android:name=".ui.NumbersActivity" />
         <activity
             android:name=".ui.SplashScreenActivity"
             android:theme="@style/FullScreenAppTheme">

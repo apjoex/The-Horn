@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.layout_home_menu_item.view.*
 class MainActivity : AppCompatActivity() {
 
     private val menu = listOf(
-        HomeMenu(R.drawable.ic_food, "Food"),
+        HomeMenu(R.drawable.ic_food, "Foods"),
         HomeMenu(R.drawable.ic_numbers, "Numbers"),
 //        HomeMenu(R.drawable.ic_animal, "Animals"),
         HomeMenu(R.drawable.ic_phrase, "Phrases"),
@@ -47,7 +47,10 @@ class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         itemView.menuLabel.text = homeMenu.title
         itemView.card.setOnClickListener {
             when (homeMenu.title){
+                "Foods" -> itemView.context.startActivity(Intent(itemView.context, FoodActivity::class.java))
                 "Numbers" -> itemView.context.startActivity(Intent(itemView.context, NumbersActivity::class.java))
+                "Phrases" -> itemView.context.startActivity(Intent(itemView.context, PhrasesActivity::class.java))
+                "Nouns, verbs, adjectives, ..." -> itemView.context.startActivity(Intent(itemView.context, NVAActivity::class.java))
             }
         }
     }
