@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
     private val menu = listOf(
         HomeMenu(R.drawable.ic_food, "Foods"),
         HomeMenu(R.drawable.ic_numbers, "Numbers"),
-//        HomeMenu(R.drawable.ic_animal, "Animals"),
         HomeMenu(R.drawable.ic_phrase, "Phrases"),
         HomeMenu(R.drawable.ic_nouns, "Nouns, verbs, adjectives, ...")
     )
