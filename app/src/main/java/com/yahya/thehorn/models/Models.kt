@@ -13,3 +13,9 @@ data class NumberData(
     val translation: String = "",
     val sound: String = ""
 )
+
+data class PhraseData(
+    val original: String = "",
+    val sound: String = "",
+    val translation: String = ""
+)
