@@ -85,7 +85,6 @@ class FoodsAdapter(private val activity: FoodActivity, private val foods: Mutabl
             activity.playSound(foods[position].sound, it)
         }
     }
-
 }
 
 class FoodVH(itemView: View): RecyclerView.ViewHolder(itemView) {

@@ -23,7 +23,7 @@
         android:id="@+id/translated"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:textColor="@color/colorBlack"
         android:textSize="@dimen/textMedium"
         android:textStyle="italic|bold"
@@ -46,7 +46,7 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorDivider"
         app:layout_constraintBottom_toBottomOf="parent"
