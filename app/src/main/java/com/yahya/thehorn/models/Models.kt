@@ -28,7 +28,7 @@ data class FoodData(
 )
 
 data class WordData(
-    val wor: String = "",
+    val word: String = "",
     val sound: String = "",
     val translation: String = ""
 )
